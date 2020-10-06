@@ -1,6 +1,7 @@
 <html>
     <head>
         <title>Simple JS Calculator</title>
+        <link rel="stylesheet" href="styles.css">
     </head>
     <body>
         <form name="inputForm">
@@ -25,18 +26,18 @@
                     document.inputForm.finalValue.value=result;
                 }
             </script>
-            <center>
-                <label>Number 1</label>
-                <input type="text" name="val1"><br><br>
-                <label>Number 2</label>
-                <input type="text" name="val2"><br><br>
-                <label>Answer</label>
-                <input type="text" name=finalValue><br><br>
-                <input type="button" value="+" onClick="doCalc(1)">
-                <input type="button" value="-" onClick="doCalc(2)">
-                <input type="button" value="*" onClick="doCalc(3)">
-                <input type="button" value="/" onClick="doCalc(4)">
-            </center>
+            
+            <label>Number 1</label>
+            <input type="text" name="val1"><br><br>
+            <label>Number 2</label>
+            <input type="text" name="val2"><br><br>
+            <label>Answer</label>
+            <input type="text" name=finalValue><br><br>
+            <input type="button" value="+" onClick="doCalc(1)">
+            <input type="button" value="-" onClick="doCalc(2)">
+            <input type="button" value="*" onClick="doCalc(3)">
+            <input type="button" value="/" onClick="doCalc(4)">
+            
             
 
         </form>

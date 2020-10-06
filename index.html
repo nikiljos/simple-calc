@@ -33,9 +33,12 @@
                 <input type="button" value="/" class="btn btn-primary mb-2" onClick="doCalc(4)">
                 <input type="button" value="Log10" class="btn btn-primary mb-2" onClick="doCalc(5)">
                 <input type="button" value="Square Root" class="btn btn-primary mb-2" onClick="doCalc(6)">
+                <input type="button" value="Percentage" class="btn btn-primary mb-2" onClick="doCalc(7)">
+                <input type="button" value="Square" class="btn btn-primary mb-2" onClick="doCalc(8)">
+                
             </div>
 
-            <br><br>*For getting Square Root and log enter the operand in Number 1 field
+            <br><br>*For getting Root, log or square enter the operand in Number 1 field
             
         </div>
                        
@@ -69,6 +72,10 @@
                 case 5: result= Math.log10(n1);
                 break;
                 case 6: result=Math.sqrt(n1);
+                break;
+                case 7: result= n1/n2*100;
+                break;
+                case 8: result= n1*n1;
                 break;
             }
             document.getElementById('finalValue').value =result;

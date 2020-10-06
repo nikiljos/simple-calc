@@ -1,3 +1,4 @@
+
 *{
   margin: 0;
   padding: 0;
@@ -5,13 +6,13 @@
   box-sizing: border-box;
 }
 body{
-  font-family: montserrat;
+  font-family: 'Montserrat', sans-serif;
   display: flex;
   text-align: center;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: linear-gradient(#9cebfc,#6ae1fb);
+  background-color:#F0F8FF !important; 
 }
 .center{
   /* display: none; */
@@ -20,35 +21,85 @@ body{
   border-radius: 20px;
 }
 input[type="text"]{
-  height: 60px;
-  width: 300px;
-  margin-top: 40px;
-  border-radius: 1px;
+  height: 20px;
+  width: 425%;
+  margin-top: 10px;
+  border-radius: 10px;
   border: 1px solid #e1e7ea;
-  color: black;
+  color: #007bff !important;
   font-size: 22px;
   font-weight: bold;
-  text-align: right;
-  padding-right: 20px;
-  background: linear-gradient(#d1dce0,#dfe6e9);
+  text-align: left;
+  padding: 15px;
+  transform: translate(-40%,-120%);
+
 }
-form .buttons{
+
+::placeholder{
+  color:#007bff !important;
+ 
+}
+/*form .buttons{
   width: 300px;
   margin: 10px 25px 0 25px;
   padding: 10px 0;
-}
+}*/
 input[type="button"]{
-  width: 58px;
-  height: 55px;
-  margin: 5px;
+  width: 50px;
+  height: 50px;
+  padding:10px;
   font-size: 22px;
-  line-height: 55px;
+  line-height: 20px;
   border-radius: 3px;
   border: 1px solid #d9d9d9;
-  background: linear-gradient(#d9d9d9, #bfbfbf);
+  color:#d9d9d9;
 }
 input[type="button"]:hover{
   transition: .5s;
-  background: linear-gradient(#bfbfbf, #d9d9d9);
+  color:#007bff;
+  background: linear-gradient(#bfbfbf, #d9d9d9) ;
+}
+label{
+  text-align:left;
+  width:200px;
+  padding:15px;
+  font-size: 1.5rem;
+  transform:translate(-140%,-50%);
+
 }
 
+
+.container.mx-auto.col-6.mt-5{
+  width:20rem;
+  height:3rem;
+  padding:10px;
+  position: relative;
+  right:120px;
+  bottom:45px;
+  display:flex !important;
+  flex-wrap: wrap;
+  flex-direction: row !important;
+  justify-content: space-between !important;
+}
+
+@media screen and (max-width: 900px){
+  .container.mx-auto.col-6.mt-5{
+    right:90px;
+    width:200%;
+flex-direction: row;
+  }
+
+  input[type="text"]{
+    width: 300px;
+    transform: translate(-30%,-50%);
+    height:10px;
+    font-size: 1rem;
+  }
+  label{
+    top:10px;
+    position: relative;
+    left:100px;
+    width:100%;
+    font-size: 1rem;
+  }
+}

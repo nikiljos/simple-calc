@@ -1,45 +1,80 @@
 <html>
-    <head>
-        <title>Simple JS Calculator</title>
-        <link rel="stylesheet" href="styles.css">
-    </head>
-    <body>
-        <form name="inputForm">
-            <script lanuage="JavaScript">
-                function doCalc(n)
-                {
-                    var num1,num2,result;
-                    num1=document.inputForm.val1.value;
-                    num2=document.inputForm.val2.value;
-                    n1=Number(num1);
-                    n2=Number(num2);
-                    switch(n){
-                        case 1: result= n1+n2;
-                        break;
-                        case 2: result= n1-n2;
-                        break;
-                        case 3: result= n1*n2;
-                        break;
-                        case 4: result= n1/n2;
-                        break;
-                    }
-                    document.inputForm.finalValue.value=result;
-                }
-            </script>
-            <div class="calc-form">
-                <label>Number 1</label>
-                <input type="text" name="val1"><br><br>
-                <label>Number 2</label>
-                <input type="text" name="val2"><br><br>
-                <label>Answer</label>
-                <input type="text" name=finalValue><br><br>
-                <input type="button" value="+" onClick="doCalc(1)">
-                <input type="button" value="-" onClick="doCalc(2)">
-                <input type="button" value="*" onClick="doCalc(3)">
-                <input type="button" value="/" onClick="doCalc(4)">
-            </div>
-                           
 
-        </form>
-    </body>
+<head>
+    <title>Simple JS Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <form name="inputForm">
+        <script lanuage="JavaScript">
+            function doCalc(n) {
+                var num1, num2, result;
+                num1 = document.inputForm.val1.value;
+                num2 = document.inputForm.val2.value;
+                if (num1 !== "" && num2 !== "") {
+                    n1 = Number(num1);
+                    n2 = Number(num2);
+
+                    switch (n) {
+                        case 1: result = n1 + n2;
+                            break;
+                        case 2: result = n1 - n2;
+                            break;
+                        case 3: result = n1 * n2;
+                            break;
+                        case 4: result = n1 / n2;
+                            break;
+                    }
+                    document.inputForm.finalValue.value = result
+                }
+                else
+                {
+                    alert("Please enter  valid values for performing valid operations")
+                }
+
+            }
+        </script>
+        <div class="calc-form">
+            <table>
+                <tr>
+                    <td> <label>Number 1</label></td>
+                    <td> <input type="number" name="val1"><br><br></td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Number 2</label>
+                    </td>
+                    <td>
+                        <input type="number" name="val2"><br><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Answer</label>
+                    </td>
+                    <td>
+                        <input type="number" name=finalValue disabled><br><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="button" value="+" onClick="doCalc(1)">
+                    </td>
+                    <td>
+                        <input type="button" value="-" onClick="doCalc(2)">
+                    </td>
+                    <td>
+                        <input type="button" value="*" onClick="doCalc(3)">
+                    </td>
+                    <td>
+                        <input type="button" value="/" onClick="doCalc(4)">
+                    </td>
+                </tr>
+
+            </table>
+        </div>
+    </form>
+</body>
+
 </html>

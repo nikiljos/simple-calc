@@ -19,7 +19,7 @@ body{
   background: black;
   border-radius: 20px;
 }
-input[type="text"]{
+input[type="number"]{
   height: 60px;
   width: 300px;
   margin-top: 40px;
@@ -32,15 +32,18 @@ input[type="text"]{
   padding-right: 20px;
   background: linear-gradient(#d1dce0,#dfe6e9);
 }
-form .buttons{
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+/* form .buttons{
   width: 300px;
   margin: 10px 25px 0 25px;
   padding: 10px 0;
-}
+} */
 input[type="button"]{
-  width: 58px;
+  width: 55px;
   height: 55px;
-  margin: 5px;
+  margin:5px;
   font-size: 22px;
   line-height: 55px;
   border-radius: 3px;
@@ -49,6 +52,7 @@ input[type="button"]{
 }
 input[type="button"]:hover{
   transition: .5s;
+  cursor:pointer;
   background: linear-gradient(#bfbfbf, #d9d9d9);
 }
 

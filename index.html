@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
-     <title>Simple JS Calculator</title>
+     <title>Calculator</title>
       
      <link rel="stylesheet" href="styles.css">
     <!-- Bootstrap CSS -->
@@ -31,7 +31,42 @@
                 <input type="button" value="Square Root" class="btn btn-primary mb-2" onClick="doCalc(6)">
                 <input type="button" value="Percentage" class="btn btn-primary mb-2" onClick="doCalc(7)">
                 <input type="button" value="Square" class="btn btn-primary mb-2" onClick="doCalc(8)">
-                
+              
+                <table> 
+                <!--
+                  <tr> 
+                     <td colspan="3"><input type="text" id="result"/></td> 
+                     
+                     <td><input type="button" value="c" onclick="clr()"/> </td> 
+                  </tr> -->
+                  <tr> 
+                     <!-- create button and assign value to each button -->
+                     <!-- dis("1") will call function dis to display value -->
+                     <td><input type="button" value="1" onclick="dis('1')" class="btn btn-primary mb-2"> </td> 
+                     <td><input type="button" value="2" onclick="dis('2')" class="btn btn-primary mb-2"> </td> 
+                     <td><input type="button" value="3" onclick="dis('3')" class="btn btn-primary mb-2"> </td> 
+                     <td><input type="button" value="/" onclick="dis('/')" class="btn btn-primary mb-2"> </td> 
+                  </tr> 
+                  <tr> 
+                     <td><input type="button" value="4" onclick="dis('4')" class="btn btn-primary mb-2"> </td> 
+                     <td><input type="button" value="5" onclick="dis('5')" class="btn btn-primary mb-2"> </td> 
+                     <td><input type="button" value="6" onclick="dis('6')" class="btn btn-primary mb-2"> </td> 
+                     <td><input type="button" value="-" onclick="dis('-')" class="btn btn-primary mb-2"> </td> 
+                  </tr> 
+                  <tr> 
+                     <td><input type="button" value="7" onclick="dis('7')" class="btn btn-primary mb-2"> </td> 
+                     <td><input type="button" value="8" onclick="dis('8')" class="btn btn-primary mb-2"> </td> 
+                     <td><input type="button" value="9" onclick="dis('9')" class="btn btn-primary mb-2"> </td> 
+                     <td><input type="button" value="+" onclick="dis('+')" class="btn btn-primary mb-2"> </td> 
+                  </tr> 
+                  <tr> 
+                     <td><input type="button" value="." onclick="dis('.')" class="btn btn-primary mb-2"> </td> 
+                     <td><input type="button" value="0" onclick="dis('0')" class="btn btn-primary mb-2"> </td> 
+                     <!-- solve function call function solve to evaluate value -->
+                     <td><input type="button" value="=" onclick="doCalc(1)" class="btn btn-primary mb-2"> </td> 
+                     <td><input type="button" value="*" onclick="dis('*')" class="btn btn-primary mb-2"> </td> 
+                  </tr> 
+               </table>
             </div>
 
             
@@ -48,6 +83,15 @@
 
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.bundle.min.js" integrity="sha384-BOsAfwzjNJHrJ8cZidOg56tcQWfp6y72vEJ8xQ9w6Quywb24iOsW913URv1IS4GD" crossorigin="anonymous"></script>
     <script lanuage="JavaScript">
+
+      
+      //function that display value 
+      function dis(val) 
+         { 
+             document.getElementById("val1").value+=val 
+         }
+
+
       function doCalc(n)
         {
             var num1,num2,result;

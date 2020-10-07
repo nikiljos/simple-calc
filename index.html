@@ -16,21 +16,17 @@
   <body>
     <form name="inputForm ">
         <div class="calc-form col-6 mt-5 mx-auto">
-            <label>Number 1</label>
-            <!-- <input type="text" name="val1"><br><br> -->
-            <input class="form-control" type="text"  id="val1" placeholder="Enter 1st Number:" aria-label="deafult input example">
-            <label>Number 2</label>
-            <!-- <input type="text" name="val2"><br><br> -->
-            <input class="form-control" type="text"  id="val2" placeholder="Enter 2nd Number:" aria-label="deafult input example">
+            <label>Expression</label>
 
+            <input class="form-control" type="text"  id="val1" placeholder="Enter an expression to calculate" aria-label="deafult input example">
+            
             <label>Answer</label>
-            <!-- <input type="text" name=finalValue><br><br> -->
-            <input class="form-control" type="text" id="finalValue"  aria-label="deafult input example">
+
+            <input class="form-control" type="text" id="finalValue"  aria-label="deafult input example" placeholder="Your Answer">
+            
             <div class="container mx-auto col-6 text-center mt-5">
-                <input type="button" value="+" class="btn btn-primary mb-2" onClick="doCalc(1)">
-                <input type="button" value="-" class="btn btn-primary mb-2" onClick="doCalc(2)">
-                <input type="button" value="*" class="btn btn-primary mb-2" onClick="doCalc(3)">
-                <input type="button" value="/" class="btn btn-primary mb-2" onClick="doCalc(4)">
+                <input type="button" value="Calculate" class="btn btn-primary mb-2" onClick="doCalc(1)">
+                
                 <input type="button" value="Log10" class="btn btn-primary mb-2" onClick="doCalc(5)">
                 <input type="button" value="Square Root" class="btn btn-primary mb-2" onClick="doCalc(6)">
                 <input type="button" value="Percentage" class="btn btn-primary mb-2" onClick="doCalc(7)">
@@ -38,7 +34,6 @@
                 
             </div>
 
-            <br><br>*For getting Root, log or square enter the operand in Number 1 field
             
         </div>
                        
@@ -53,33 +48,27 @@
 
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.bundle.min.js" integrity="sha384-BOsAfwzjNJHrJ8cZidOg56tcQWfp6y72vEJ8xQ9w6Quywb24iOsW913URv1IS4GD" crossorigin="anonymous"></script>
     <script lanuage="JavaScript">
-        function doCalc(n)
+      function doCalc(n)
         {
             var num1,num2,result;
             num1=document.getElementById('val1').value ;
-            num2=document.getElementById('val2').value ;
             n1=Number(num1);
-            n2=Number(num2);
+            result=eval(num1);
+            RNum=Number(result);
             switch(n){
-                case 1: result= n1+n2;
-                break;
-                case 2: result= n1-n2;
-                break;
-                case 3: result= n1*n2;
-                break;
-                case 4: result= n1/n2;
-                break;
                 case 5: result= Math.log10(n1);
                 break;
                 case 6: result=Math.sqrt(n1);
                 break;
-                case 7: result= n1/n2*100;
+                case 7: result= RNum*100;
                 break;
                 case 8: result= n1*n1;
                 break;
             }
             document.getElementById('finalValue').value =result;
         }
+        
+        
     </script>
   </body>
 </html>

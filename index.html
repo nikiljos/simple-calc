@@ -24,20 +24,15 @@
 
             <input class="form-control" type="text" id="finalValue"  aria-label="deafult input example" placeholder="Your Answer">
             
-            <div class="container mx-auto col-6 text-center mt-5">
-                <input type="button" value="Calculate" class="btn btn-primary mb-2" onClick="doCalc(1)">
-                
-                <input type="button" value="Log10" class="btn btn-primary mb-2" onClick="doCalc(5)">
-                <input type="button" value="Square Root" class="btn btn-primary mb-2" onClick="doCalc(6)">
-                <input type="button" value="Percentage" class="btn btn-primary mb-2" onClick="doCalc(7)">
-                <input type="button" value="Square" class="btn btn-primary mb-2" onClick="doCalc(8)">
-              
-            </div>    
+             
             
             <div class="container mx-auto col-20 text-center mt-5">
                 
                      <!-- create button and assign value to each button -->
                      <!-- dis("1") will call function dis to display value -->
+
+                     <input type="button" value="CLEAR" onclick="clr()" class="btn btn-dark mb-2">
+                     <br>
                      <input type="button" value="1" onclick="dis('1')" class="btn btn-dark mb-2"> 
                      <input type="button" value="2" onclick="dis('2')" class="btn btn-dark mb-2">  
                      <input type="button" value="3" onclick="dis('3')" class="btn btn-dark mb-2"> 
@@ -61,6 +56,16 @@
                   
             </div>
 
+            <div class="container mx-auto col-6 text-center mt-5">
+               <!--<input type="button" value="Calculate" class="btn btn-primary mb-2" onClick="doCalc(1)">-->
+               
+               <input type="button" value="Log10" class="btn btn-primary mb-2" onClick="doCalc(5)">
+               <input type="button" value="Square Root" class="btn btn-primary mb-2" onClick="doCalc(6)">
+               <input type="button" value="Percentage" class="btn btn-primary mb-2" onClick="doCalc(7)">
+               <input type="button" value="Square" class="btn btn-primary mb-2" onClick="doCalc(8)">
+             
+           </div>   
+
             
         </div>
                        
@@ -76,11 +81,16 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.bundle.min.js" integrity="sha384-BOsAfwzjNJHrJ8cZidOg56tcQWfp6y72vEJ8xQ9w6Quywb24iOsW913URv1IS4GD" crossorigin="anonymous"></script>
     <script lanuage="JavaScript">
 
+      function clr() 
+         { 
+            document.getElementById("val1").value = "" 
+         } 
+
       
       //function that display value 
       function dis(val) 
          { 
-             document.getElementById("val1").value+=val 
+            document.getElementById("val1").value+=val 
          }
 
 

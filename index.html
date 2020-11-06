@@ -14,9 +14,11 @@
 
   </head>
   <body>
-    <form name="inputForm ">
+    <form name="inputForm" onsubmit="return false">
         <div class="calc-form col-6 mt-5 mx-auto">
           <!--  <label>Expression</label>  -->
+
+          <p id="exp"></p>
 
             <input class="form-control" type="text"  id="val" placeholder="Enter an expression to calculate" aria-label="deafult input example">
                     
@@ -47,7 +49,7 @@
                      <input type="button" value="." onclick="dis('.')" class="btn btn-dark mb-2"> 
                      <input type="button" value="0" onclick="dis('0')" class="btn btn-dark mb-2"> 
                      <!-- solve function call function solve to evaluate value -->
-                     <input type="button" value="=" onclick="doCalc(1)" class="btn btn-dark mb-2">
+                     <input type="button" value="=" onclick="doCalc(1)" class="btn btn-dark mb-2" id="evaluate">
                      <input type="button" value="*" onclick="dis('*')" class="btn btn-primary mb-2"> 
                   
             </div>
@@ -75,7 +77,7 @@
 
 
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.bundle.min.js" integrity="sha384-BOsAfwzjNJHrJ8cZidOg56tcQWfp6y72vEJ8xQ9w6Quywb24iOsW913URv1IS4GD" crossorigin="anonymous"></script>
-    <script lanuage="JavaScript">
+    <script>
 
       function clr() 
          { 
@@ -107,8 +109,26 @@
                 case 8: result= n1*n1;
                 break;
             }
+
+            document.getElementById('exp').innerHTML=num1;
             document.getElementById('val').value =result;
         }
+
+      //Listening for enter key///////////////////////////////
+      // Get the input field
+      var tfield = document.getElementById("val");
+
+      // Execute a function when the user releases a key on the keyboard
+      tfield.addEventListener("keyup", function(event) {
+        // Number 13 is the "Enter" key on the keyboard
+        if (event.keyCode === 13) {
+          // Cancel the default action, if needed
+          event.preventDefault();
+          // Trigger the button element with a click
+          document.getElementById("evaluate").click();
+        }
+      });
+      /////////////////////////////////////////////////////////
         
         
     </script>

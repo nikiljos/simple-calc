@@ -16,15 +16,11 @@
   <body>
     <form name="inputForm ">
         <div class="calc-form col-6 mt-5 mx-auto">
-            <label>Expression</label>
+          <!--  <label>Expression</label>  -->
 
-            <input class="form-control" type="text"  id="val1" placeholder="Enter an expression to calculate" aria-label="deafult input example">
+            <input class="form-control" type="text"  id="val" placeholder="Enter an expression to calculate" aria-label="deafult input example">
+                    
             
-            <label>Answer</label>
-
-            <input class="form-control" type="text" id="finalValue"  aria-label="deafult input example" placeholder="Your Answer">
-            
-             
             
             <div class="container mx-auto col-20 text-center mt-5">
                 
@@ -83,21 +79,21 @@
 
       function clr() 
          { 
-            document.getElementById("val1").value = "" 
+            document.getElementById("val").value = "" 
          } 
 
       
       //function that display value 
       function dis(val) 
          { 
-            document.getElementById("val1").value+=val 
+            document.getElementById("val").value+=val 
          }
 
 
       function doCalc(n)
         {
             var num1,num2,result;
-            num1=document.getElementById('val1').value ;
+            num1=document.getElementById('val').value ;
             n1=Number(num1);
             result=eval(num1);
             RNum=Number(result);
@@ -111,7 +107,7 @@
                 case 8: result= n1*n1;
                 break;
             }
-            document.getElementById('finalValue').value =result;
+            document.getElementById('val').value =result;
         }
         
         

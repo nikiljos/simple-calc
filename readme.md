@@ -1,1 +1,1 @@
-See this simple code live at https://easycalcuate.netlify.app/
+See this simple code live at https://calculator.nikjos.in/
